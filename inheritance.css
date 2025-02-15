@@ -1,0 +1,22 @@
+div{
+    background-color: yellow;
+    color:red;
+}
+form{
+    background-color:lightcoral;
+    color:aquamarine;
+}
+input{
+    background-color: inherit;
+    color:inherit;
+}
+button{
+    background-color:inherit;
+    color:inherit;
+}
+button:hover{
+    background-color:maroon;
+}
+a{
+    color:inherit;
+}

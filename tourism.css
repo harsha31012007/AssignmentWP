@@ -1,0 +1,83 @@
+body{
+    background-color:blanchedalmond;
+}
+.first img{
+    width:150px;
+    height:150px;
+}
+.first{
+    display:flex;
+}
+.first div{
+    margin-left:25%;
+}
+h1{
+text-align:center;
+color:#F0A04B;
+font-family: "Lexend Giga", serif;
+font-size:40px;
+}
+#one{
+    color:goldenrod;
+    font-size:20px;
+    animation:mov 4s linear 1s infinite normal;
+}
+#nav{
+    height:50px;
+    background-color: rgb(168, 230, 243);
+    border:2px solid lightgoldenrodyellow;
+    border-radius:10px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-content:center;
+ }
+ .in{
+    height:60px;
+    width:150px;
+    font-size:24px;
+    margin-left:5px;
+    line-height:50px;
+ }
+ #last{
+    margin-left:40px;
+ }
+ .in:hover{
+    text-decoration: underline #F0A04B;
+ }
+ a{
+    text-decoration: none;
+ }
+ #main{
+    margin-top:20px;
+    width:500px;
+    height:500px;
+ }
+ #main{
+    display:flex;
+    animation:mov 4s linear 1s infinite alternate;
+    
+ }
+ @keyframes mov{
+    from{
+       transform:translateX(-300px);
+    }
+    to{
+        transform:translateX(500px);
+    }
+}
+a{
+    color:blue;
+}
+i{
+    margin-top:20px;
+    margin-right:15px;
+}
+i:hover{
+    transform:translateY(-5px);
+}
+#last{
+    text-align: center;
+    color:gold;
+    text-shadow: 2px 2px 8px burlywood;
+}

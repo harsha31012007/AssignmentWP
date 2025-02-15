@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body style="background-color: antiquewhite;text-align: center;">
+
+       <h1 style="color: cornflowerblue;">Hotel booking form</h1>
+       <form action="/server">
+    First name
+    <input type="text" placeholder="Enter your first name">
+    Last name
+    <input type="text" placeholder="Enter your last name">
+    <br>
+    <br>
+    Email
+    <input type="email" placeholder="Enter your email">
+    <br>
+    <br>
+    Phone number
+    <input type="number" placeholder="Enter your number">
+    <br>
+    <br>
+    No.of Guests
+    <br>
+    <input type="number" placeholder="Enter no.of adults">
+    <input type="number" placeholder="Enter no.of children" style="margin-left: 10px;">
+    <br>
+    <br>
+    <label for="c">Room type</label>
+    <select name="c" id="c">
+        <option value="j">Please select</option>
+        <option value="z">single</option>
+        <option value="y">double</option>
+        <option value="l">triple</option>
+    </select>
+    <br>
+    <br>
+    Arrival date &amp; time
+    <br>
+    <input type="date" placeholder="Enter date">
+    <input type="time" paceholder="Enter date" style="margin-left:10px">
+    <select name="d" id="d" style="margin-left: 10px;">
+        <option value="e">AM</option>
+        <option value="f">PM</option>
+    </select>
+    <br>
+    <br>
+    Departure Date
+    <input type="date" placeholder="Enter date">
+    <br>
+    <br>
+    Accomodation Rating
+    <br>
+    <input type="radio" id="1" name="Star" value="1">
+    <label for="1">1 star</label>
+    <br>
+    <input type="radio" id="2" name="Star" value="2">
+    <label for="2">2 star</label>
+    <br>
+    <input type="radio" id="3" name=Star" value="3">
+    <label for="3">3 star</label>
+    <br>
+    <input type="radio" id="4" name="Star" value="4">
+    <label for="4">4 star</label>
+    <br>
+    <input type="radio" id="5" name="Star" value="5">
+    <label for="5">5 star</label>
+    <br>
+    <br>
+    <textarea placeholder="comments" rows="6" cols="40"></textarea>
+    <br>
+    <br>
+    <button type="submit" id="b1">Submit</button>
+    <button type="reset" id="b2">Clear Form</button>
+</form>
+</body>
+</html>
