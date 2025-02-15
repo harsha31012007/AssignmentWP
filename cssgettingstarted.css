@@ -1,0 +1,130 @@
+/* color and background color */
+/* p{
+    color:red;
+    background-color:blue;
+}
+h1{
+    color:gold;
+    background-color:rgb(0,255,0);
+}
+button{
+    color:#000000;
+    background-color:aquamarine;
+} */
+
+/*practice question 1 css*/
+/* h2{
+   color:orange;
+}
+button{
+    color:white;
+    background-color:blue;
+}
+p{
+    color:white;
+    background-color:black;
+} */
+
+/*named color systems*/
+/* h1{
+    color:olive;
+}
+h2{
+    color:teal;
+} */
+ /*RGB system*/
+/* h1{
+    color:rgb(255,255,255);
+    background-color:rgb(0,0,0);
+}
+h2{
+    color:rgb(255,0,0);
+    background-color:rgb(0,0,255);
+}
+p{
+    color:rgb(0,255,0);
+    background-color:rgb(255,255,0);
+}
+button{
+    color:rgb(0,255,255);
+    background-color:rgb(255,0,0255);
+} */
+  /*hex codes*/
+/* h1{
+    color:#ffffff;
+    background-color:#000000;
+}
+h2{
+    color:#ff0000;
+    background-color:#0000ff;
+}
+p{
+    color:#00ff00;
+    background-color:#ffff00;
+}
+button{
+    color:#00ffff;
+    background-color:#ff00ff;
+} */
+ /*text properties*/
+  h1{
+    text-align:center;
+    /* border:solid;
+    width:50%; */
+    /* text-align:right; */
+    /* text-align:end; */
+    /* font-weight:400; */
+    font-weight:bold;
+    /* font-weight:700; */
+    /* font-weight:normal; */
+    /* font-weight:lighter; */
+    /* font-weight:bolder; */
+    /* text-decoration: red underline; */
+    /* text-decoration:overline;
+    text-decoration-color:red; */
+    /* text-decoration:line-through;
+    text-decoration:overline; */
+    /* text-decoration:wavy red underline; */
+    /* text-decoration: red wavy underline; */
+    /* text-decoration: red underline;
+    text-decoration-style:solid; */
+    text-decoration:solid red underline;
+    /* text-decoration:dashed red underline;
+    text-decoration:dotted red underline;
+    text-decoration:double red underline; */
+    /* font-family:Arial; */
+    /* font-family:Impact; */
+    font-family: copperplate,fantasy,avant garde,'Times New Roman';
+}    
+  p{
+    /* text-align:right;
+    text-align:center;
+    text-align:left;
+    text-align:start;
+    text-align:justify;*/
+    font-weight:400;
+    /* font-weight:700; */
+    /* font-weight:bold; */
+    /* font-weight:lighter; */
+    /* font-weight:100; */
+    /* line-height:normal; */
+    line-height:2.5;
+    /* line-height:0.5; */
+    letter-spacing:normal;
+    /* letter-spacing:5px; */
+    /* font-size:5px; */
+    /* font-size:15px; */
+    font-size:20px;
+    /* font-size:50px; */
+    /* font-family:'Times New Roman'; */
+    /* font-family:fantasy; */
+    font-family: copperplate,fantasy,avant garde,'Times New Roman';
+}
+/* a{
+    text-decoration:none;
+} */
+ h2{
+    /* font-family:fantasy; */
+    font-family: copperplate,fantasy,avant garde,'Times New Roman';
+ }
+

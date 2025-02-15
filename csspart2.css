@@ -1,0 +1,119 @@
+/* *{
+    font-family:'Courier New';
+     background-color: blue; 
+    } */
+/* h3{
+    color:purple;
+}
+h1{
+    color:#b92b27;
+}*/
+/* #login{
+    color:azure;
+    background-color:darkgreen;
+}
+#signup{
+     color:aquamarine;
+} */
+/* .upvote{ */
+    /* color:green; */
+    /* color:#b92b27 !important; */
+    /* color:blueviolet; */
+    /* background-color: green;
+    color:aliceblue;
+} */
+/* p a{
+    color:#b92b27;
+    background-color:magenta;
+} */
+ /* .post a{
+    color:blanchedalmond;
+    background-color: chocolate;
+ } */
+ /* nav ul li{
+    color:bisque;
+    background-color: darkgoldenrod;
+ }
+ /* nav ul li a */
+ /* nav  a{
+    color:rgb(78, 36, 63);
+    background-color:rgb(57, 199, 21);
+ }
+ p+h3{
+    color:aquamarine;
+    background-color: coral;
+ }
+ .upvote+button{
+    color:crimson;
+    background-color: darksalmon;
+ }
+ div>input{
+    color:maroon;
+    background-color: darkmagenta;
+ } */
+ /* input::placeholder{
+    color:chartreuse;
+    background-color: darkblue;
+ } */
+  /* input[placeholder="username"]{
+    color:chartreuse;
+    background-color:hotpink;
+ } */
+  /* input[type="text"]{
+    color:blanchedalmond;
+    background-color: antiquewhite;
+  } */
+  /* input[type="password"]{
+    color: aliceblue;
+    background-color: aquamarine;
+  }
+  input[type]{
+    color:blueviolet;
+    background-color: aqua;
+  }
+  /* practce q */
+  /* #myid p{
+    color:darkgreen;
+    background-color: aquamarine;
+  } div[id="myid"] p{
+    color:darkgreen;
+    background-color:mediumvioletred;
+  }
+  p::first-line{
+   color:blue;
+   background-color: maroon;
+  }
+  h1::first-letter{
+   color:green;
+  }
+  p::selection{
+   background-color: blueviolet;
+   color: cornflowerblue;
+  } */
+   /* button:hover{
+      color:aquamarine;
+      background-color: blue;
+   } */
+   /* button:hover{
+      color:lightcoral;
+      background-color: magenta;
+   } */
+   /* p:active{
+      font-weight:bold;
+      color:blanchedalmond;
+      background-color: chartreuse;
+   } */
+    /* input[type="radio"]:checked+label{
+      color:forestgreen;
+      font-weight: bold;
+    }
+    .post:nth-of-type(2n+1){
+      background-color: bisque;
+    } */
+     /* h1{
+      color:blue;
+     } */
+     div{
+      background-color: blueviolet;
+      color:brown;
+     }

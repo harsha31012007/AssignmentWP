@@ -1,0 +1,249 @@
+/* #i1{
+  height:200px;
+  width:200px;
+  /* background-color:rgba(255,0,0,1); 
+   background-color:rgba(255,0,0,0.5);
+  /* background-color:rgba(255,0,0,0); */
+  /* background-color:#ff000000;
+  background-color:#ff0000ff; 
+  background-color:rgba(255,0,0,0);
+  background-color:rgba(0, 255, 68, 0.151);
+}
+#i2{
+    height:200px;
+    width:200px;
+    background-color: blue;
+    opacity:0.5;
+    opacity:0;
+}
+#i3{
+    background-color: blue;
+    height:200px;
+    width:200px;
+    /* transition:2s; */
+    /* transition:1s 0.2s; */
+     /* transition-duration: 1s;
+    transition-delay: 0.2s;  */
+    /* margin:0 auto;
+    margin:auto;
+    margin-top:10px;
+    transition:margin-top 2s ease-in-out 0.2s;
+    /* transition:margin-top 2s ease 0.2s;
+}
+#i3:hover{
+    background-color:black;
+    border-radius:50%;
+    margin-top:500px;
+} */
+
+
+
+
+
+ /* tranform */
+ /* section{
+    margin-top:100px;
+ }
+ div{
+    width:200px;
+    height:50px;
+    text-align:center;
+    background-color:#7aa874;
+    border:2px solid balck;
+    margin:10px auto;
+ }
+ div:nth-of-type(2n){
+    background-color: #f7db6a;
+ }
+ div:nth-of-type(3n){
+    background-color: #ebb02d;
+ } */
+
+ /* #one{
+    transform:rotate(-45deg);
+ }
+ #two{
+    transform:scale(0.5);
+    transform:scale(0.5,1.5);
+    transform:scaleX(0.5);
+    transform:scaleY(2);
+    transform:scale(-5);
+    transform:scale(0.5);
+ }
+ #three{
+    transform:translate(50px);
+    transform:translate(15px,40px);
+    transform:translateX(-50px);
+    transform:translateY(-80px);
+    transform:translateX(-50px);
+ }
+ #four{
+    transform:skew(30deg);
+    transform:skew(90deg);
+    transform: skew(-30deg);
+ } */
+
+ /* box shadow */
+
+ /* div{
+    width:200px;
+    height:50px;
+    text-align:center;
+    background-color:#7aa874;
+    border:2px solid balck;
+    margin:10px auto;
+    box-shadow:2px 2px 8px black;
+ } */
+
+
+ /* backgroundimage */
+/* div{
+   height:500px;
+   width:500px;
+   margin:10px auto;
+   color:white;
+   background-color:#7aa874;
+   background-image:url("myimage.jpg");
+   background-image:url("https://th.bing.com/th/id/R.829843c130c948d4fbb835dae965a5da?rik=LCpFbdcAeWDZ8w&riu=http%3a%2f%2fwallpapercave.com%2fwp%2ffAwVCh3.jpg&ehk=lGN4CaEuFMjMiZTZ2nF9id7MRRJ3e1tiWELDbLGorPE%3d&risl=&pid=ImgRaw&r=0");
+   background-size:contain;
+   background-size: auto;
+   background-size:cover;
+}
+  */
+
+
+  /* cardhover effect */
+  /* .card{
+   height:370px;
+   width:200px;
+   border:2px solid black;
+   display:inline-block;
+   margin:10px;
+   border-radius:5px;
+   padding: 0 2px 0 2px;
+   box-shadow:0px 2px 8px black;
+   transition:1s;
+  }
+  img{
+   width:100%;
+   height:70%;
+   border-radius:5px 5px 0 0;
+  }
+  .card:hover{
+   box-shadow:0 8px 16px black;
+  } */
+
+
+  /* position */
+ /* div{
+   height:100px;
+   width:100px;
+   background-color: green;
+   text-align: center;
+   border: 3px solid black;
+   margin:20px;
+   display:inline-block;
+}
+#static{
+   background-color:yellow;
+   position:static;
+   top:100px;
+   left:100px; 
+}
+#relative{
+   background-color:yellow;
+   position:relative;
+   top:100px;
+   left:100px;
+}
+#absolute{
+   background-color:yellow;
+   position:absolute;
+   top:100px;
+   left:100px;
+}
+#fixed{
+   background-color:yellow;
+   position:fixed;
+   top:100px;
+   left:100px;
+}
+#sticky{
+   background-color:thistle;
+   position:sticky;
+   top:100px;
+   left:100px;
+} */
+
+/* smile face */
+/* .face{
+   height:400px;
+   width:400px;
+   background-color: #ffa511;
+   border-radius:50%;
+}
+.mouth{
+   width:200px;
+   height:75px;
+   background-color: brown;
+   border-radius:0 0 50px 50px;
+   position:absolute;
+   top:250px;
+   left:100px;
+}
+.lefteye,.righteye{
+   height:50px;
+   width:50px;
+   background-color: black;
+   border-radius:50%;
+   display:inline-block;
+   position:absolute;
+   top:100px;
+   left:100px;
+}
+.righteye{
+   left:250px;
+} */
+
+/* assignment */
+#box1 {
+   width: 100px;
+   height: 100px;
+   background: green;
+   transition:width 2s ease-in 0.5s;
+ }
+ 
+ #box1:hover {
+   width: 600px;
+ }
+
+ #box2 {
+   width: 100px;
+   height: 100px;
+   background: red;
+   transform:translate(200px,200px) rotate(90deg);
+ }
+
+ #box3 {
+   width: 100px;
+   height: 100px;
+   background: lightblue;
+   transform:skew(0deg,20deg);
+ }
+
+ #box4 {
+   width: 100px;
+   height: 100px;
+   background: lightgreen;
+   box-shadow:2px 2px 5px green;
+ }
+
+ #myPic {
+   width: 200px;
+   height: 200px;
+   background: pink;
+   background-image: url(myimage.jpg);
+   background-size: cover;
+   opacity:0.5;
+   opacity:50%;
+ }

@@ -1,0 +1,56 @@
+/* practice q1 */
+/* h1{
+    font-family:league spartan;
+    color:#ffa511;
+    text-align:center;
+    font-size:55px;
+    font-weight:900;
+    letter-spacing:2px;
+    line-height:1.5;
+    text-decoration:teal double underline;
+    text-transform:uppercase;
+} */
+/* practice q2 */
+*{
+    font-family:'Courier New';
+}
+h1{
+    color:#1b74e4;
+}
+/* .a{
+    background-color:aqua;
+} */
+
+/* .su{
+    background-color:black;
+    color: white;
+} */
+ /* #log_in,#Regis-ter{
+    background-color:aqua;
+ }
+ #s{
+    background-color:black;
+    color:white;
+ } */
+
+ .outer{
+    height:200px;
+    width:70px;
+    border:2px solid black;
+ }
+ .inner{
+   height:50px;
+   width:50px;
+   border:2px solid black;
+   margin:10px;
+   border-radius:50%;
+ }
+ #i1{
+    background-color:red;
+ }
+ #i2{
+    background-color:yellow;
+ }
+ #i3{
+    background-color:green;
+ }
