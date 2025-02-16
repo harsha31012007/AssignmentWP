@@ -113,3 +113,21 @@ h1 {
 a{
     text-decoration: none;
 }
+i{
+    margin-top:20px;
+    margin-right:15px;
+}
+i:hover{
+    transform:translateY(-5px);
+}
+.kh{
+    text-align:center;
+}
+#b1,#b2{
+    background-color:rgb(138, 85, 6);
+    border-radius: 5px;
+}
+#b1:hover,#b2:hover{
+    transform:translateY(-5px);
+    border-radius:50%;
+}
