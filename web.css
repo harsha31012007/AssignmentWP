@@ -1,0 +1,133 @@
+body{
+    background-color:blanchedalmond;
+}
+#nav{
+    height:50px;
+    background-color: rgb(168, 230, 243);
+    border:2px solid lightgoldenrodyellow;
+    border-radius:10px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-content:center;
+ }
+ .in{
+    height:50px;
+    width:80px;
+    font-size:24px;
+    margin-left:5px;
+    line-height:50px;
+ }
+ .in:hover{
+    text-decoration: underline;
+ }
+.first img{
+    width:100px;
+    height:100px;
+}
+.first{
+    display:flex;
+}
+.first div{
+    margin-left:25%;
+}
+h1{
+  font-family: "Lexend Giga", serif;
+font-size:40px;
+}
+h3{
+    font-family:fantasy;
+}
+p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#one{
+    color:goldenrod;
+    font-size:20px;
+    animation:mov 4s linear 1s infinite normal;
+}
+@keyframes mov{
+    from{
+       transform:translateX(-300px);
+    }
+    to{
+        transform:translateX(500px);
+    }
+}
+#pets{
+    display:flex;
+    justify-content:space-evenly;
+} 
+.card{
+    width:400px;
+    border:2px solid black;
+    border-radius:15px;
+    margin:10px;
+    box-shadow:8px 8px 16px black;
+}
+.card p,h3{
+    padding:10px;
+}
+.card:hover{
+    box-shadow:16px 16px 32px black;
+}
+h1 {
+    text-align:center;
+    color:#F0A04B;
+  }
+  
+  span {
+    color:#FADA7A;
+  }
+  
+  h4 {
+    text-align:center;
+    font-size:20px;
+    text-shadow:2px 2px 4px  #3c787e;
+    color: #3c787e;
+  }
+.card img{
+    width:100%;
+    border-radius:15px 15px 0 0;
+}
+@media(max-width:370px){
+    #pets{
+        flex-wrap:wrap;
+    }
+}
+#s{
+    height:80px;
+    width:80px;
+    margin-top:10px;
+    margin-left:190px;
+}
+#s{
+    height:80px;
+    width:100px;
+    margin-top:10px;
+    margin-left:190px;
+}
+#s:hover{
+    transform:translateY(-5px);
+}
+a{
+    text-decoration: none;
+}
+i{
+    margin-top:20px;
+    margin-right:15px;
+}
+i:hover{
+    transform:translateY(-5px);
+}
+.kh{
+    text-align:center;
+}
+#b1,#b2{
+    background-color:rgb(138, 85, 6);
+    border-radius: 5px;
+}
+#b1:hover,#b2:hover{
+    transform:translateY(-5px);
+    border-radius:50%;
+}
