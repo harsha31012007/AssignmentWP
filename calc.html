@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Your CSS goes here */
+        .grid {
+            padding: 0;
+            margin: 0;
+            height: 480px;
+            width: 400px;
+            display: grid;
+            margin: 50px auto;
+            background-color: rgb(30,30,30);
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .calculator {
+            border-radius: 15px;
+            text-align: right;
+            line-height: 70px;
+            letter-spacing: 10px;
+            color: white;
+            font-size: 30px;
+            grid-column: span 4;
+            background-color: black;
+        }
+
+        .one {
+            border-radius: 50%;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            background-color: black;
+        }
+
+        .one1 {
+            border-radius: 15px;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            grid-column: span 2;
+            background-color: black;
+        }
+
+        .two {
+            border-radius: 50%;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            background-color: orange;
+        }
+
+        .two2 {
+            border-radius: 15px;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            grid-column: span 2;
+            background-color: orange;
+        }
+
+        .grid div:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+      <h1 style="text-align:center;font-family:papyrus;font-size:40px;">Calculator</h1>
+    <div class="grid">
+        <div class="calculator">0</div>
+        <div class="two2">C</div>
+         <div class="two">del</div>
+         <div class="two">&divide;</div>
+        <div class="one">1</div>
+        <div class="one">2</div>
+        <div class="one">3</div>
+         <div class="two">x</div>
+        <div class="one">4</div>
+        <div class="one">5</div>
+        <div class="one">6</div>
+        <div class="two">+</div>
+        <div class="one">7</div>
+        <div class="one">8</div>
+        <div class="one">9</div>
+        <div class="two">-</div>
+         <div class="one1">0</div>
+        <div class="one">.</div>
+        <div class="two">=</div>
+    </div>
+</body>
+</html>
