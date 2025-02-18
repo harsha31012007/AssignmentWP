@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        .grid {
+            padding: 0;
+            margin: 0;
+            height: 480px;
+            width: 400px;
+            display: grid;
+            margin: 50px auto;
+            background-color: rgb(30,30,30);
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .calculator {
+            border-radius: 15px;
+            text-align: right;
+            line-height: 70px;
+            letter-spacing: 10px;
+            color: white;
+            font-size: 30px;
+            grid-column: span 4;
+            background-color: black;
+            padding-right: 15px;
+        }
+
+        .one, .two, .one1, .two2 {
+            border-radius: 50%;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        .two, .two2 {
+            background-color: orange;
+        }
+
+        .one1 {
+            border-radius: 15px;
+            grid-column: span 2;
+        }
+
+        .two2 {
+            border-radius: 15px;
+            grid-column: span 2;
+        }
+
+        .grid div:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;font-family:papyrus;font-size:40px;">Calculator</h1>
+    <div class="grid">
+        <div class="calculator" id="display">0</div>
+        <div class="two2" onclick="clearDisplay()">C</div>
+        <div class="two" onclick="deleteLast()">del</div>
+        <div class="two" onclick="appendOperator('/')">&divide;</div>
+        <div class="one" onclick="appendNumber(1)">1</div>
+        <div class="one" onclick="appendNumber(2)">2</div>
+        <div class="one" onclick="appendNumber(3)">3</div>
+        <div class="two" onclick="appendOperator('*')">x</div>
+        <div class="one" onclick="appendNumber(4)">4</div>
+        <div class="one" onclick="appendNumber(5)">5</div>
+        <div class="one" onclick="appendNumber(6)">6</div>
+        <div class="two" onclick="appendOperator('+')">+</div>
+        <div class="one" onclick="appendNumber(7)">7</div>
+        <div class="one" onclick="appendNumber(8)">8</div>
+        <div class="one" onclick="appendNumber(9)">9</div>
+        <div class="two" onclick="appendOperator('-')">-</div>
+        <div class="one1" onclick="appendNumber(0)">0</div>
+        <div class="one" onclick="appendDecimal()">.</div>
+        <div class="two" onclick="calculateResult()">=</div>
+    </div>
+    <script>
+        let display = document.getElementById('display');
+        let currentInput = '';
+
+        function appendNumber(number) {
+            if (currentInput === '0') {
+                currentInput = number.toString();
+            } else {
+                currentInput += number;
+            }
+            updateDisplay();
+        }
+
+        function appendOperator(operator) {
+            if (currentInput.length > 0 && !isNaN(currentInput[currentInput.length - 1])) {
+                currentInput += operator;
+                updateDisplay();
+            }
+        }
+
+        function appendDecimal() {
+            let parts = currentInput.split(/[-+*/]/);
+            if (!parts[parts.length - 1].includes('.')) {
+                currentInput += '.';
+                updateDisplay();
+            }
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            currentInput = currentInput.slice(0, -1);
+            updateDisplay();
+        }
+
+        function calculateResult() {
+            try {
+                currentInput = eval(currentInput).toString();
+                updateDisplay();
+            } catch {
+                currentInput = 'Error';
+                updateDisplay();
+                setTimeout(clearDisplay, 1000);
+            }
+        }
+
+        function updateDisplay() {
+            display.textContent = currentInput || '0';
+        }
+    </script>
+</body>
+</html>
