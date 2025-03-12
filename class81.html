@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web App</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+            background-image: url('https://th.bing.com/th/id/OIP.I_VUpRASFJ6ExyAPr1ss9QHaEK?rs=1&pid=ImgDetMain');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .dark-mode {
+            background: #333;
+            color: white;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+            background: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover { background: #0056b3; }
+        button:active { background: #003d7a; }
+        .danger { background: #dc3545; }
+        .danger:hover { background: #a71d2a; }
+
+        /* List Styling */
+        #list {
+            list-style: none;
+            padding: 0;
+        }
+        #list li {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Table */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        td button {
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        td .danger {
+            background: #dc3545;
+            color: white;
+        }
+        td .danger:hover {
+            background: #a71d2a;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .full-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            max-width: 80%;
+            max-height: 80%;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+        .full-image.show {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        /* Countdown Timer */
+        #timer {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: block;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <br><br>
+
+    <!-- List Operations -->
+    <input type="text" id="listInput" placeholder="Enter items">
+    <button onclick="addToList()">Add</button>
+    <button onclick="sortList()">Sort</button>
+    <button onclick="removeDuplicates()">Remove Duplicates</button>
+    <button class="danger" onclick="reverseList()">Reverse</button>
+    <ul id="list">
+        <li><b>Apple</b></li>
+        <li><b>Banana</b></li>
+        <li><b>Grapes</b></li>
+        <li><b>Orange</b></li>
+    </ul>
+
+    <!-- Dynamic Table -->
+     <br><br>
+    <input type="text" id="nameInput" placeholder="Enter Name">
+    <input type="number" id="ageInput" placeholder="Enter Age">
+    <button onclick="addRow()">Add Row</button>
+    <table id="dataTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <!-- Countdown Timer -->
+    <h2>Countdown Timer</h2>
+    <input type="number" id="timerInput" placeholder="Enter seconds">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+    <div id="timer">00:00</div>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+        <img src="https://picsum.photos/200?random=1" onclick="showImage(this)">
+        <img src="https://picsum.photos/200?random=2" onclick="showImage(this)">
+        <img src="https://picsum.photos/200?random=3" onclick="showImage(this)">
+        <img src="https://picsum.photos/200?random=4" onclick="showImage(this)">
+        <img src="https://picsum.photos/200?random=5" onclick="showImage(this)">
+    </div>
+    <img id="fullImage" class="full-image" onclick="hideImage()">
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+        }
+        if (localStorage.getItem("darkMode") === "true") {
+            document.body.classList.add("dark-mode");
+        }
+
+        // List Operations
+        function addToList() {
+            let input = document.getElementById("listInput").value;
+            if (!input) return;
+            let li = document.createElement("li");
+            li.innerHTML = `<b>${input}</b>`;
+            document.getElementById("list").appendChild(li);
+        }
+        function sortList() {
+            let items = [...document.querySelectorAll("#list li")].map(li => li.innerHTML);
+            document.getElementById("list").innerHTML = items.sort().map(item => `<li>${item}</li>`).join("");
+        }
+        function removeDuplicates() {
+            let items = [...new Set([...document.querySelectorAll("#list li")].map(li => li.innerHTML))];
+            document.getElementById("list").innerHTML = items.map(item => `<li>${item}</li>`).join("");
+        }
+        function reverseList() {
+            let items = [...document.querySelectorAll("#list li")].map(li => li.innerHTML);
+            document.getElementById("list").innerHTML = items.reverse().map(item => `<li>${item}</li>`).join("");
+        }
+
+        // Dynamic Table
+        function addRow() {
+            let table = document.getElementById("dataTable");
+            let name = document.getElementById("nameInput").value;
+            let age = document.getElementById("ageInput").value;
+            if (!name || !age) return;
+            let row = table.insertRow();
+            row.innerHTML = `<td>${name}</td><td>${age}</td><td><button class="danger" onclick="deleteRow(this)">Delete</button></td>`;
+        }
+        function deleteRow(btn) {
+            btn.parentNode.parentNode.remove();
+        }
+
+        // Image Gallery
+        function showImage(img) {
+            let fullImage = document.getElementById("fullImage");
+            fullImage.src = img.src;
+            fullImage.classList.add("show");
+        }
+        function hideImage() {
+            document.getElementById("fullImage").classList.remove("show");
+        }
+        let timerInterval;
+    let timeLeft;
+    let isPaused = false;
+
+    function startTimer() {
+        let inputSeconds = parseInt(document.getElementById("timerInput").value);
+        if (isNaN(inputSeconds) || inputSeconds <= 0) return;
+
+        timeLeft = inputSeconds;
+        updateTimerDisplay();
+        updateBackground(timeLeft);
+
+        clearInterval(timerInterval);  
+        timerInterval = setInterval(() => {
+            if (!isPaused && timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
+                updateBackground(timeLeft);
+            }
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+    }
+
+    function pauseTimer() {
+        isPaused = !isPaused;  
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        timeLeft = 0;
+        isPaused = false;
+        document.getElementById("timer").textContent = "00:00";
+        document.body.style.background = "";
+    }
+
+    function updateTimerDisplay() {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        document.getElementById("timer").textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function updateBackground(secondsLeft) {
+        if (secondsLeft > 10) {
+            document.body.style.background = "green";
+        } else if (secondsLeft > 5) {
+            document.body.style.background = "yellow";
+        } else {
+            document.body.style.background = "red";
+        }
+    }
+    </script>
+</body>
+</html>
